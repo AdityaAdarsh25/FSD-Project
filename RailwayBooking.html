@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAILWAY BOOKING</title>
+    
+    <style>
+        @keyframes example{
+            from {background-color: orange;}
+            to {background-color: green;}
+        }
+        @keyframes example2{
+            from{font-size: medium;}
+            to{font-size: large;}
+        }
+        .main{
+            width:45%;
+            height:65%;
+            background-color:rgb(242, 244, 245,0.5);
+            margin:0px auto;
+            border: 2px solid #FFF;
+            padding: 10px;
+            /* box-shadow:0px 0px 6px rgb(0, 4, 255); */
+            position:absolute;
+            left:0px;
+            top:85px;
+        }
+        .button1{
+            height:35px;
+            width:100px;
+            background-color:rgb(15, 178, 243);
+            align-content:center;
+            text-align:center;
+            font-weight:bold;
+            font-size:large;
+            box-shadow: #1d06eb;
+            text-transform:uppercase;
+            text-decoration: antiquewhite;
+            padding:10px;
+            margin:3%;
+            position:sticky;
+            top:0;
+            animation:example 1s ease-in-out infinite;
+        }
+        .head1{
+            height:75px;
+            width:100%;
+            text-align:center;
+            background-color:rgba(57, 168, 241, 0.904);
+            position:sticky;
+            top:0px;
+            left:0px;
+            background-image:url("./images/train.jpg")
+        }
+        .head1 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            background-color: #007BFF; /* Button color */
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .logo {
+            position: absolute; 
+            top: 10px;          
+            right: 10px;        
+            width: 50px;       
+            height: 50px;
+        }
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+        .logo2 {
+            position: absolute; 
+            top: 0px;          
+            left: 0px;        
+            width: 70px;       
+            height: 70px;
+            background:rgb(15, 178, 243);
+        }
+        .logo2 img {
+            width: 100%;
+            height: auto;
+        }
+
+        input[type=text]{
+            box-sizing:border-box;
+            border: none;
+            border-radius:30px;
+            font-size:large;
+            margin:5px;
+            padding:10px 1px;
+        }
+        input[type=date]{
+            width:115px;
+            height:25px;
+            box-sizing:border-box;
+            border: 2px  red;
+            border-radius:5px;
+        }
+        .nameclass{
+            position:absolute;
+            left:20px;
+            align-content:center;
+        }
+        .class{
+            background-color:white;
+            width:210px;
+            Height:30px;
+            position:absolute;
+            /* left:87px; */
+        }
+        .tickettype{
+            position:absolute;
+            left:5px;
+            align-content:center;
+            top:50%;
+            margin:5px;
+        }
+        .ticket{
+            background-color:white;
+            width:210px;
+            Height:30px;
+            position:absolute;
+            
+        }
+        input[type=button]{
+            color:darkorange;
+            background-color: yellow;
+            width:60px;
+            position:absolute;
+            height:60px;
+            left:0px;
+        }
+        .checkboxes {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .checkboxes label {
+            display: flex;
+            align-items: center;
+        }
+
+        .checkboxes input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2); 
+        }
+
+        .submission {
+             display: flex;
+            justify-content: space-between;
+            gap: 20px; 
+        }
+
+        .submission input[type="submit"] {
+            flex: 1; 
+            padding: 10px 0; 
+            background-color: orange;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+             cursor: pointer;
+            transition: background-color 0.3s ease;
+         }
+
+
+        .help{
+            width: 45%;
+            height:25%;
+            background-color:rgb(242, 244, 245);
+            margin:0px auto;
+            border: 2px dashed #FFF;
+            padding: 10px;
+            box-shadow:0px 0px 6px rgb(0, 4, 255);
+            position:absolute;
+            left:0px;
+            top:530px;
+        }
+        .Welcome{
+            height:80px;
+            text-decoration:orange;
+            position:absolute;
+            top:20%;
+            left:55%;
+            animation:example2 1s ease-in-out infinite;
+        }
+        .holiday{
+            text-align:center;
+            position:absolute;
+            top:720px;
+            background:white;
+            width:100%;
+            height:500px;
+            left:0px;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        .card {
+            width: 350px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            height:250px;
+            
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+        .enlarge{
+            font-size:x-large
+        }
+        
+    </style>
+</head>
+<body>
+    <style>
+        body{
+        background-image:url("./images/Image1.jpg");
+        background-repeat:no-repeat;
+        background-size:cover;
+        }
+    </style>
+    <div class="head1">
+        <div class="logo">
+            <img src="./images/logo1.png" alt="Logo">
+        </div>
+        <div class="logo2">
+            <img src="./images/logo2.png" alt="Logo">
+        </div>
+
+        <nav>
+            <a href="login.html" class="button1" target="_blank">Login</a>
+            <a href="register.html" class="button1" target="_blank">Register</a>
+            <a href="#contact" class="button1">Contact Us</a>
+            <a href="BookFood.html" class="button1" target="_blank">Book Food On Train</a>
+            <a href="Cancel.html" class="button1" target="_blank">Cancel Ticket</a>
+        </nav>
+    </div>
+    </div>
+    <div class="main">
+    <h1 align="center" style="color:rgba(57, 168, 241, 0.904); text-shadow:2px 2px #1d06eb;"><b>BOOK TICKET</b></h1>
+        <label for="from" ><b>From:</b></label>
+        <input type="text" id="from" name="From" placeholder="Source">
+        <label for="from" b> <b>To:</b></label>
+        <input type="text" id="from" name="To" placeholder="Destination">
+    <div class="date">
+        <label for="Date"><b>Date:&nbsp;&nbsp;&nbsp;</b></label>
+        <input type="date" id="date" name="date">
+    </div>
+    <br>
+    <div class="nameclass"><b>Class:</b>
+    <select class="class">
+        <option>General</option>
+        <option>Sleeper</option>
+        <option>1st AC</option>
+        <option>2nd AC</option>
+        <option>3rd AC</option>
+    </select>
+    </div>
+    <div class="tickettype"><b>Ticket Type:</b>
+        <select class="ticket">
+            <option>General</option>
+            <option>Tatkal</option>
+            <option>Senior Citizen</option>
+            <option>Person with disability</option>
+            <option>Ladies</option>
+        </select>
+    </div>
+    <br><br><br><br><br>
+    <form class="checkboxes">
+        <b >Person with Disability Concession</b><input type="checkbox" style="color:blue" name="language" value="english">&nbsp;
+        <b>Flexible with Date</b><input type="checkbox" style="color:blue" name="language" value="english">&nbsp;
+        <br>
+        <b>Train with Available Berth</b><input type="checkbox" style="color:blue" name="language" value="english">&nbsp;
+        <b>Railway Pass Concession</b><input type="checkbox" style="color:blue" name="language" value="english">&nbsp;
+        <div class="Submission">
+            <input type="Submit" name="Submit"  style="width:150px; height:50px; background-color: darkorange;" value="Submit"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="Submit" name="Book Via AskDisha"  style="width:150px; height:50px; background-color: darkorange;" value="Book Via AskDisha"/>
+        </div>
+        </form>  
+    </div>
+    <div class="help" id="contact">
+        <h3 style="color:blue;">Customers can use enhanced interface for their IRCTC related queries!!</h3>
+        <a href="https://equery.irctc.co.in">
+            <h3 align="center">https://equery.irctc.co.in</h3>
+        </a>
+        <h3 style="color:red">Customer Care Numbers : 14646/08044647999 /08035734999 (Language: Hindi and English)</h3>
+    </div>
+    <div class="Welcome" style="color: orange;"><h1>WELCOME TO INDIAN RAILWAYS</h1></div>
+    <div class="holiday">
+        <h1>HOLIDAYS</h1>,
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="./images/dubai.jpg" alt="Card Image 1" >
+                <div class="card-content">
+                    <h3 class="enlarge">International Packages</h3>
+                    <p>Best deals in International Holiday packages, handpicked by IRCTC, for Thailand, Dubai, Sri Lanka, Hong Kong, China, Macau, Bhutan, Nepal, U.K., Europe, USA, Australia etc. The packages are inclusive of sightseeing, meals, visa charges and overseas medical insurance to give you a hassle-free and memorable experience.</p>
+                </div>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="./images/VD.jpg" alt="Card Image 2" >
+                <div class="card-content">
+                    <h3 class="enlarge">Domestic Air Packages</h3>
+                    <p>Be it the spiritual devotee seeking blessings of Tirupati, Shirdi or Mata Vaishno Devi or the leisure traveller wanting to relish the Blue mountains of North East, Sand-dunes of Rajasthan, Hamlets of Ladakh, Wonders of Himalayas, Serene lakes or Picturesque Islands, Indian Railways has it all. Discover India through Indian Railways!</p>
+                </div>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="./images/maharaj.jpg" alt="Card Image 3" >
+                <div class="card-content">
+                    <h3 class="enlarge">Maharaja Express</h3>
+                    <p>Redefining Royalty, Luxury and Comfort, Maharajas' express takes you on a sojourn to the era of bygone 
+                        stately splendour of princely states. Sylvan furnishings, elegant ambience and modern amenities are 
+                        amalgamated for an “Experience Unsurpassed”. It has been a winner of “World’s Leading Luxury train” 
+                        by World Travel Awards consecutively for last six years</p>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="./images/mount.jpg" alt="Card Image 4">
+                <div class="card-content">
+                    <h3 class="enlarge">Rail Tour Packages</h3>
+                    <p>Railways offers Exclusive Rail tour packages with confirmed train tickets, sight-seeing and meals for enchanting Nilgiri Mountains, Darjeeling, Kullu Manali, Kashmir, Gangtok or divine tours of Mata Vaishno Devi, Rameswaram, Madurai, Shirdi, Tirupati etc. Holiday packages/ Land packages to these destinations are also available.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/Gaurav.jpg" alt="Card Image " >
+                <div class="card-content">
+                    <h3 class="enlarge">Bharat Gaurav Tourist Train</h3>
+                    <p>Railways operates Bharat Gaurav Tourist Train having AC III-Tier accommodation on train specially designed to promote domestic tourism in India. This train runs on various theme based circuits covering pilgrimage and heritage destinations in its itinerary on a 5 days to 20 days trip and showcase India’s rich cultural heritage.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./images/kerala.jpg" alt="Card Image 4">
+                <div class="card-content">
+                    <h3 class="enlarge">South Special Exploration Train</h3>
+                    <p>Explore the vibrant beauty of South India with our travel package! Discover lush landscapes, serene backwaters, ancient temples, and pristine beaches. Experience Kerala's houseboats, Tamil Nadu's heritage sites, and Karnataka's hill stations. A perfect blend of culture, nature, and relaxation awaits you.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>

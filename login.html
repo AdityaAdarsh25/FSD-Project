@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin:0px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:#333;
+            display:flex;            
+            justify-content: center;
+            top:30%;
+            height:70vh;
+            background-image:url("./images/gbg.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .login{
+            background:rgba(0,0,0,0.5);
+            width:300px;
+            border-radius:50%;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px;
+            width:300px;
+            text-align:center;
+            position:absolute;
+            top:30%;
+            height:200px;
+            color:white
+        }
+        .input{
+            color:red;
+            margin:15px;
+    
+        }
+        a{
+            color:white;
+        }
+        a:hover{
+            color:aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1>LOGIN</h1>
+        <form>
+            <div class="input">
+                <label for="Username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter Username:" required>
+            </div>
+            <div class="input">
+                <label for="Password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password:" required>
+            </div>
+            <button type="Submit">Login</button>
+            <a href="register.html" target="_blank"><h3><b>Dont have an Account?</b></h3></a>
+        </form>
+    </div>
+</body>
+</html>

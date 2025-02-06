@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancel Ticket</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image:url("./images/CTicket.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+        }
+        .design{
+            background:aqua;
+            border-radius:50%;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px;
+            width:400px;
+            text-align:center;
+            height:350px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <style>
+        
+    </style>
+    <div class="design">
+        <form align="center" >
+            <h2 align="center">CANCEL YOUR TRAIN TICKET</h2>
+            <h5 align="center">Ticket Cancelling is only available till the Chart is prepared.</h5>
+                <label for="Name" >Name:</label>
+                <input type="text" id="Name" name="Username" value="Name" placeholder="Enter your name:" required><br><br>
+                <label for="Train No" >Train Number:</label>
+                <input type="number" id="Train No" name="Train" value="Train" min="10000" max="99999" required><br><br>
+                <label for="PNR" >PNR Number:</label>
+                <input type="number" id="PNR" name="PNR" value="PNR" min="1000000000" max="9999999999" required><br><br>
+                <label for="Date">Date of Journey</label>
+                <input type="date" id="Date" name="Date" value="date" required><br><br>
+            <input type="Submit" name="Cancel" value="Cancel"/>&nbsp;&nbsp;
+            <input type="Reset" name="Reset" value="Reset"/>
+        </form>
+    </div>
+</body>
+</html>

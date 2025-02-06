@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url("./images/image3.jpg"); 
+            background-size: cover;
+            background-position: center;
+        }
+        .register{
+            background:aqua;
+            width:300px;
+            border-radius:50%;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px;
+            width:300px;
+            text-align:center;
+            height:450px;
+            color:red;
+        }
+        a{
+            color:red;
+        }
+        a:hover{
+            color:black;
+        }
+
+    </style>
+</head>
+<body>
+    <style>
+    
+    </style>
+    <div class="register">
+        <h1><b>REGISTER</b></h1>
+        <form align="center">
+            <h5 align="center">Kindly fill the details carefully</h5>
+            <b>First Name:</b>&nbsp;<input type="text" name="Fname" value="" required><br><br>
+            <b>Last Name:</b>&nbsp;<input type="text" name="Lname" value="" required><br><br>
+            <b>Date of Birth:</b>&nbsp;<input type="date" name="date" value=""  max="2006-01-01" required><br><br>
+            <b>Phone no:</b>&nbsp;<input type="number" name="Phone" value="" min="1000000000" max="9999999999" required><br><br>
+            <b>Email ID:</b>&nbsp;<input type="text" name="Email" value="" required><br><br>
+            
+            <b>Username:</b>&nbsp;<input type="text" name="User" value="" required><br><br>
+            <b>Password:</b>&nbsp;<input type="password" name="password" value="" required><br><br>
+            <input type="Submit" name="Submit" value="Submit"/>&nbsp;&nbsp;
+            <input type="Reset" name="Reset" value="Reset"/>
+            <a href="login.html" target="_blank"><h3><b>Already have an account?</b></h3></a>
+        </form>
+    </div>
+    
+</body>
+</html>
